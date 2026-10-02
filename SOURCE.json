@@ -1,6 +1,6 @@
 {
   "source_repository": "https://github.com/babakovn/beacon",
-  "source_commit": "b4ca2395cb4c38ac0f283030e7899c349f9d0fd7",
+  "source_commit": "023bed16b698a9d98d2b7dc5f03d6b51287c7109",
   "meaning": "Only the closed client export is public. No server source, production configuration or runtime identity is included.",
   "files": [
     {
@@ -50,8 +50,8 @@
     },
     {
       "file": "mcp-read.mjs",
-      "bytes": 2995,
-      "sha256": "493dc9f1390b3fad455ef8d3e0bf544727a8634a7ccf411c6fd556db4178a910"
+      "bytes": 3011,
+      "sha256": "0c758e444ac85db1c51a69d31275d8f7958fd9aada3f6b32ab197569d5bd3ab1"
     },
     {
       "file": "test-read.mjs",
@@ -64,9 +64,39 @@
       "sha256": "e23ca62f93d595e494128e5004fbcce1086e58f6d0afaa2a383601c6957a7179"
     },
     {
+      "file": "task-watch.mjs",
+      "bytes": 7709,
+      "sha256": "164d145444a50558bf9aa0dde146ef34922289157575d54ce3801e0170ce76c4"
+    },
+    {
+      "file": "test-subscription.mjs",
+      "bytes": 3229,
+      "sha256": "8c3f2d420f8642597352e35d1fbf2c0152a9494788d8e45b441a05ba02d7d3f5"
+    },
+    {
+      "file": "test-review-request.mjs",
+      "bytes": 2701,
+      "sha256": "27259583891b70a8f0114d5f0b54a71404313828ccbe4d9c980e292753a1b496"
+    },
+    {
+      "file": "review-request.mjs",
+      "bytes": 3907,
+      "sha256": "a4dc035ffeab89c6b0ff7c41d71f11e4bbbbddc9c5598d7f7f421c6e8aac9bf2"
+    },
+    {
+      "file": "pilot-checklist.json",
+      "bytes": 684,
+      "sha256": "93be67287aeb2c1eae540b694fc2217267203b2f0e969e3d02a764b08ae3de54"
+    },
+    {
+      "file": "evaluation-fixture.json",
+      "bytes": 1310,
+      "sha256": "553cec454dc24f1cc625081c99f2184e2e626eef190335776872edeedaf2f738"
+    },
+    {
       "file": "README.md",
-      "bytes": 2945,
-      "sha256": "3ae53cfe29ff044b38df0c82cf0aa9774356251fd7490fd60c04a0575b7b5846"
+      "bytes": 5948,
+      "sha256": "8838a56d48e483310d3d90a05bbfd723eb04e812e3f5ddde75ccfceae704adab"
     },
     {
       "file": "LICENSE",
@@ -80,8 +110,8 @@
     },
     {
       "file": "package.json",
-      "bytes": 340,
-      "sha256": "929084880c8b60ca79dc54c1008655ed18479347b3279f72df7c69e28ec9184a"
+      "bytes": 386,
+      "sha256": "378b3b04b0ec7df85c936113e116dcfaa8716c9031d7256c0bc13c48fcfd104e"
     }
   ]
 }

@@ -1,0 +1,49 @@
+{
+  "format": "commons-subscription-evaluation-fixture-v1",
+  "meaning": "Synthetic TEST input, not production participant activity. No network, key or private input is required.",
+  "origin": "https://commons.example",
+  "now": 1800000000000,
+  "before": [
+    {
+      "thread_id": "cth_AAAAAAAAAAAAAAAAAAAAAA",
+      "revision": 1,
+      "title": "TEST A",
+      "skills": ["testing"]
+    },
+    {
+      "thread_id": "cth_BBBBBBBBBBBBBBBBBBBBBB",
+      "revision": 1,
+      "title": "TEST B",
+      "skills": ["testing"]
+    }
+  ],
+  "after": [
+    {
+      "thread_id": "cth_AAAAAAAAAAAAAAAAAAAAAA",
+      "revision": 2,
+      "title": "TEST A",
+      "skills": ["testing"]
+    },
+    {
+      "thread_id": "cth_CCCCCCCCCCCCCCCCCCCCCC",
+      "revision": 1,
+      "title": "TEST C",
+      "skills": ["testing"]
+    }
+  ],
+  "expected": {
+    "first_baseline": 2,
+    "added": ["cth_CCCCCCCCCCCCCCCCCCCCCC"],
+    "changed": ["cth_AAAAAAAAAAAAAAAAAAAAAA"],
+    "no_longer_matches": ["cth_BBBBBBBBBBBBBBBBBBBBBB"],
+    "partial_removals": 0
+  },
+  "failure_cases": [
+    "check before sixty seconds",
+    "changed skill binding",
+    "HTTP 429 with Retry-After 120",
+    "external URL in task reference"
+  ],
+  "runtime": "Node 24.19.0; standard library only",
+  "command": "node --test test-subscription.mjs"
+}

@@ -26,7 +26,7 @@ export async function readMcp(origin, method = 'resources/list', params = {}) {
     throw new Error('Reading methods only');
   if (
     method === 'resources/read' &&
-    !/^commons:\/\/(guide|tasks|results|task\/cth_[A-Za-z0-9_-]{22}|result\/cpo_[A-Za-z0-9_-]{22}|contribution\/cpa_[A-Za-z0-9_-]{22})$/.test(
+    !/^commons:\/\/(guide|tasks|results|review-requests|task\/cth_[A-Za-z0-9_-]{22}|result\/cpo_[A-Za-z0-9_-]{22}|contribution\/cpa_[A-Za-z0-9_-]{22})$/.test(
       params.uri ?? '',
     )
   )

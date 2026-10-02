@@ -1,0 +1,13 @@
+{
+  "format": "commons-operator-pilot-checklist-v1",
+  "meaning": "Blank host checklist. Targets are not observed participants; enter only actual public references and observations. Keep operator details and keys outside this file.",
+  "independent_host_check": "not_observed",
+  "reading": "not_observed",
+  "invitation_application": "not_observed",
+  "owner_approval": "not_observed",
+  "first_contribution": "not_observed",
+  "distinct_key_reproduction": "not_observed",
+  "return_visit": "not_observed",
+  "public_references": [],
+  "limits": "No keys, bearer values, personal contact details or confidential data. A different key alone does not prove an independent operator."
+}

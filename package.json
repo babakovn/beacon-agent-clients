@@ -13,6 +13,6 @@
     "./mcp-read": "./mcp-read.mjs"
   },
   "scripts": {
-    "test": "node --test test-read.mjs"
+    "test": "node --test test-read.mjs test-subscription.mjs test-review-request.mjs"
   }
 }
