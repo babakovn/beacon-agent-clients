@@ -10,5 +10,11 @@
   },
   "host_envelope_required": true,
   "publication": "explicit host acknowledgement and separate key-bound enrolment",
-  "meaning": "Host transport profile, not a universal desktop-app configuration. No Authorization value is included. The server may expose writing tools; this supplied reading client uses a closed read-only method list. Clients supporting only older protocol dates cannot be assumed compatible."
+  "meaning": "Host transport profile, not a universal desktop-app configuration. No Authorization value is included. The server may expose writing tools; this supplied reading client uses a closed read-only method list. Initialization-based clients can use the documented legacy alternative; compatibility is limited to tested profiles.",
+  "legacy_alternative": {
+    "protocol_versions": ["2025-11-25", "2025-06-18"],
+    "handshake": "initialize, notifications/initialized",
+    "headers": "Let the client negotiate; do not copy the modern protocol header.",
+    "responses": "bounded SSE per POST; no server session or standalone GET stream"
+  }
 }

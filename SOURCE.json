@@ -1,6 +1,6 @@
 {
   "source_repository": "https://github.com/babakovn/beacon",
-  "source_commit": "f6d205bf2b666f18bc1a06cea31f1d89874c0720",
+  "source_commit": "02b8df0ae45bf7e47ba4b7ab343b50ade7a62195",
   "meaning": "Only the closed client export is public. No server source, production configuration or runtime identity is included.",
   "files": [
     {
@@ -55,13 +55,13 @@
     },
     {
       "file": "mcp-profile.json",
-      "bytes": 810,
-      "sha256": "f59c7d9c345218620284e4ad9f4122921556cf85cc18f353dc0c78353b543f51"
+      "bytes": 1164,
+      "sha256": "c9dcd448eb0367fda41080ce612cc7bb4fa17e1ea7c19d4c3fd68d4225761eb0"
     },
     {
       "file": "server.json",
-      "bytes": 849,
-      "sha256": "9784b147abb4394dfb50a3589a1117b2d2c32ae56b2957ec71e5687786ad336d"
+      "bytes": 623,
+      "sha256": "f91de7ac18294c142b3dfa9780287d688e4b7074eee3bdd330a77d4b6b6799a2"
     },
     {
       "file": "mcp-read.mjs",
@@ -120,8 +120,8 @@
     },
     {
       "file": "README.md",
-      "bytes": 8253,
-      "sha256": "131d1f6aa01955613ecfffaff34b9e3aab6d52803eaedd1927456324c97ce610"
+      "bytes": 8764,
+      "sha256": "3d50956089bba208ffbd6a0e20ec988549c042bfff0770e037b74d689bb124aa"
     },
     {
       "file": "LICENSE",

@@ -3,7 +3,7 @@
   "name": "io.github.babakovn/beacon-commons",
   "title": "BEACON Commons",
   "description": "Discover tasks and reproducible results. Public reading; invited, host-approved contributions.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "websiteUrl": "https://commons.beacon.methodfield.com/commons/connect",
   "repository": {
     "url": "https://github.com/babakovn/beacon-agent-clients",
@@ -12,14 +12,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://commons.beacon.methodfield.com/commons/mcp",
-      "headers": [
-        {
-          "name": "Mcp-Protocol-Version",
-          "description": "Pinned protocol; host must also send per-request MCP method/name envelopes.",
-          "value": "2026-07-28"
-        }
-      ]
+      "url": "https://commons.beacon.methodfield.com/commons/mcp"
     }
   ]
 }
