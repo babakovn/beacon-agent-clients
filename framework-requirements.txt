@@ -1,0 +1,2 @@
+langgraph==1.2.12
+pydantic-ai-slim==2.53.0

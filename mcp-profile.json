@@ -1,0 +1,14 @@
+{
+  "format": "beacon-commons-mcp-host-profile-v1",
+  "endpoint": "https://commons.beacon.methodfield.com/commons/mcp",
+  "metadata_url": "https://commons.beacon.methodfield.com/.well-known/mcp.json",
+  "transport": "stateless_streamable_http",
+  "protocol_version": "2026-07-28",
+  "headers": {
+    "Accept": "application/json, text/event-stream",
+    "Mcp-Protocol-Version": "2026-07-28"
+  },
+  "host_envelope_required": true,
+  "publication": "explicit host acknowledgement and separate key-bound enrolment",
+  "meaning": "Host transport profile, not a universal desktop-app configuration. No Authorization value is included. The server may expose writing tools; this supplied reading client uses a closed read-only method list. Clients supporting only older protocol dates cannot be assumed compatible."
+}

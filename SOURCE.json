@@ -1,0 +1,87 @@
+{
+  "source_repository": "https://github.com/babakovn/beacon",
+  "source_commit": "b4ca2395cb4c38ac0f283030e7899c349f9d0fd7",
+  "meaning": "Only the closed client export is public. No server source, production configuration or runtime identity is included.",
+  "files": [
+    {
+      "file": "agent-client.mjs",
+      "bytes": 21469,
+      "sha256": "f35a37fdd32099defc90a52d3502a0b957be540c962fddc16434c08439a60754"
+    },
+    {
+      "file": "agent_client.py",
+      "bytes": 21887,
+      "sha256": "d82e622626b9432cca6b6bf0b637392dc376ac4db2e69e27fcfb2c6c2ce2e416"
+    },
+    {
+      "file": "workflow.mjs",
+      "bytes": 6453,
+      "sha256": "fd904b647c4303011a0fa6f9149041af50b08b1cb89f511c5d71784a85202718"
+    },
+    {
+      "file": "workflow.py",
+      "bytes": 5948,
+      "sha256": "a1dae6114f794c7c55711afe01b965ee3105d5ed303fd73427e4188dcd5dd78f"
+    },
+    {
+      "file": "public_tools.py",
+      "bytes": 2763,
+      "sha256": "ba92be492140bf049292a24b21dc17f38ba49c1a2b9a7e34d503a876750982d6"
+    },
+    {
+      "file": "langgraph_read.py",
+      "bytes": 978,
+      "sha256": "b31a5a9dfabb948ae036cf6a0681d7c8172a701e0c6fa1331ae480d8da13be00"
+    },
+    {
+      "file": "pydantic_read.py",
+      "bytes": 835,
+      "sha256": "849a39bdfd9054982c8b493b267869998306d144c28142662e3768fe4f0bc134"
+    },
+    {
+      "file": "framework-requirements.txt",
+      "bytes": 43,
+      "sha256": "c79f64272216a7ca4a962bd74225d5e2db6bb52a761d39654cba8d9494c95bbd"
+    },
+    {
+      "file": "mcp-profile.json",
+      "bytes": 810,
+      "sha256": "f59c7d9c345218620284e4ad9f4122921556cf85cc18f353dc0c78353b543f51"
+    },
+    {
+      "file": "mcp-read.mjs",
+      "bytes": 2995,
+      "sha256": "493dc9f1390b3fad455ef8d3e0bf544727a8634a7ccf411c6fd556db4178a910"
+    },
+    {
+      "file": "test-read.mjs",
+      "bytes": 1655,
+      "sha256": "70d423a775cc8968a1085c0b99059a49622e0a37740a783f139729f5391ce79e"
+    },
+    {
+      "file": "test_frameworks.py",
+      "bytes": 1508,
+      "sha256": "e23ca62f93d595e494128e5004fbcce1086e58f6d0afaa2a383601c6957a7179"
+    },
+    {
+      "file": "README.md",
+      "bytes": 2945,
+      "sha256": "3ae53cfe29ff044b38df0c82cf0aa9774356251fd7490fd60c04a0575b7b5846"
+    },
+    {
+      "file": "LICENSE",
+      "bytes": 1238,
+      "sha256": "4c86e187a1aaec34e1c23311e18be9e5e5695a24710135c7cc01e662ec4df0dc"
+    },
+    {
+      "file": ".gitignore",
+      "bytes": 68,
+      "sha256": "53dc99d76f301d6aa20e517d2be391bfa842652a1042076e6cfc60c72146e3d3"
+    },
+    {
+      "file": "package.json",
+      "bytes": 340,
+      "sha256": "929084880c8b60ca79dc54c1008655ed18479347b3279f72df7c69e28ec9184a"
+    }
+  ]
+}
