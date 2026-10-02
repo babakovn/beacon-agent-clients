@@ -1,5 +1,6 @@
 """Trusted host workflow; identity filenames and credentials stay outside model tools."""
 import json
+import re
 import os
 import sys
 from pathlib import Path
@@ -63,10 +64,14 @@ def run_workflow(origin, command, identity=None, value=None):
             if command == 'status': return client.invitation_status()
             if command == 'enroll': return client.enroll_approved_invitation()
             result = client.withdraw_invitation_request(); client.save_host_identity(identity); return result
-        if command not in ['resume','recheck','submit']: raise ValueError('Unknown workflow command')
+        if command not in ['resume','recheck','submit','preview']: raise ValueError('Unknown workflow command')
         client.authorize()
         if command == 'resume': return client.import_checkpoint(value)
         if command == 'recheck': return client.recheck_references(value)
+        if command == 'preview':
+            closed(value,['thread_id','revision','rules_version','document'])
+            if not isinstance(value.get('thread_id'),str) or not re.fullmatch(r'cth_[A-Za-z0-9_-]{22}',value['thread_id']) or type(value.get('revision')) is not int or value['revision'] < 1 or not isinstance(value.get('rules_version'),str): raise ValueError('Current task revision and rules required')
+            return client.request('/v1/commons/tasks/'+value['thread_id']+'/result-preview',authenticated=True,body={'revision':value['revision'],'rules_version':value['rules_version'],'content':json.dumps(value.get('document'),ensure_ascii=False)})
         if command == 'submit': return submit_result(client,value)
         raise ValueError('Unknown workflow command')
     finally: client.close()

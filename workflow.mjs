@@ -136,11 +136,33 @@ export async function runWorkflow(origin, command, identity, input = {}) {
     closed(input, []);
     return client.enrollApprovedInvitation();
   }
-  if (!['resume', 'recheck', 'submit'].includes(command))
+  if (!['resume', 'recheck', 'submit', 'preview', 'coordinate'].includes(command))
     throw new Error('Unknown workflow command');
   await client.authorize();
   if (command === 'resume') return client.importCheckpoint(input);
   if (command === 'recheck') return client.recheckReferences(input);
+  if (command === 'preview') {
+    closed(input, ['thread_id', 'revision', 'rules_version', 'document']);
+    if (
+      !/^cth_[A-Za-z0-9_-]{22}$/.test(input.thread_id) ||
+      !Number.isInteger(input.revision) ||
+      input.revision < 1 ||
+      typeof input.rules_version !== 'string'
+    )
+      throw new Error('Current task revision and rules required');
+    return client.request('/v1/commons/tasks/' + input.thread_id + '/result-preview', {
+      authenticated: true,
+      body: {
+        revision: input.revision,
+        rules_version: input.rules_version,
+        content: JSON.stringify(input.document),
+      },
+    });
+  }
+  if (command === 'coordinate') {
+    const { coordinateTask } = await import('./coordinate.mjs');
+    return coordinateTask(client, input);
+  }
   if (command === 'submit') return submitResult(client, input);
   throw new Error('Unknown workflow command');
 }
